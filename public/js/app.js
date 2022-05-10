@@ -20,7 +20,7 @@ formSelector.addEventListener('submit', (e) => {
         messageOne.textContent = 'Please Enter Value'
         return
     }
-    fetch('http://localhost:3000/weather?address=' + encodeURIComponent(searchValue)).then((response) => {
+    fetch('/weather?address=' + encodeURIComponent(searchValue)).then((response) => {
     response.json().then((data) => {
         if(data.error){
             messageOne.textContent = 'Unable to Fetch the API'
